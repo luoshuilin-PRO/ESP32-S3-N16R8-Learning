@@ -1,0 +1,75 @@
+# Build directories
+build
+
+# Firmware configuration
+sdkconfig*
+!sdkconfig.defaults
+
+# Doesn't publish ESP IDF components.
+# Automatically downloaded on build.
+managed_components
+
+# Project is build using ESP IDF Vscode extension.
+# But ignore, as the repo doesn't depend on it.
+.vscode
+
+# Ignore custom configuration.
+usb-output/main/config_custom.h
+
+## C
+## ---
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# debug information files
+*.dwo
