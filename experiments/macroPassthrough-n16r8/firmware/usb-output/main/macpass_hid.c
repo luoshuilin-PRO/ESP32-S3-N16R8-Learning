@@ -1,74 +1,128 @@
-// Import global project config
 #include "config.h"
+#include "macro_v1.h"
+#include "status_led.h"
+#include "esp_random.h"
 
-// Queue to store HID reports
-QueueHandle_t global_hid_report_queue = NULL;
-// Create a semaphore to manage HID sending timing
-// > Performance note: xTaskGetCurrentTaskHandle is less demanding than a new xSemaphoreCreateBinary. 
-TaskHandle_t hid_task_wait_somaphore = NULL;
+static QueueHandle_t reports;
 
-// Callback to release the HID task semaphore
-void hid_task_multiplexer_release_cb(void *arg){
-    xTaskNotifyGive(hid_task_wait_somaphore);
+static int8_t take_axis(int *pending)
+{
+    int part = *pending > 127 ? 127 : (*pending < -127 ? -127 : *pending);
+    *pending -= part;
+    return (int8_t)part;
 }
 
-// Consumer task: send all reports from queue to USB PC
-void hid_task_multiplexer(void *pvParameters) {
-  // Initialize the task semaphore
-  hid_task_wait_somaphore = xTaskGetCurrentTaskHandle();
-  // One notify to avoid blocking at first iteration
-  xTaskNotifyGive(hid_task_wait_somaphore); 
-
-  // Create a hardware timer to manage high precision lock
-  esp_timer_create_args_t timer_args = {
-    .callback = &hid_task_multiplexer_release_cb,
-    .name = "timer_hid_lock"
-  };
-  esp_timer_handle_t timer;
-  esp_timer_create(&timer_args, &timer);
-
-  // Consumer loop
-  while (true) {
-    hid_transmit_t queue_received;
-    if (xQueueReceive(global_hid_report_queue, &queue_received, portMAX_DELAY) == pdTRUE) {
-      ulTaskNotifyTake(pdTRUE, portMAX_DELAY); // wait until timer release the lock
-      esp_timer_start_once(timer, 1000); // 1ms timeout to avoid blocking if USB is not ready
-
-      // Display in console log
-      #if DEBUG_LOG
-      if (queue_received.header == HEADER_HID_KEYBOARD){
-        print_keyboard_report(pcTaskGetName(NULL), queue_received.event.keyboard);
-      } else if (queue_received.header == HEADER_HID_MOUSE) {
-        print_mouse_report(pcTaskGetName(NULL), queue_received.event.mouse);
-      }
-      #endif
-      
-      // But USB peripheral must still be ready. If the USB device is disconnected, tud_ready() will return false.
-      if (!tud_ready()) continue;
-      // If the report is not sent, requeue-it.
-      static bool status;
-      if (queue_received.header == HEADER_HID_KEYBOARD) {
-        status = tud_hid_keyboard_report(HID_ITF_PROTOCOL_KEYBOARD, queue_received.event.keyboard.modifier, queue_received.event.keyboard.keycode);
-      } else if (queue_received.header == HEADER_HID_MOUSE) {
-        status = tud_hid_mouse_report(HID_ITF_PROTOCOL_MOUSE, queue_received.event.mouse.buttons, queue_received.event.mouse.x, queue_received.event.mouse.y, queue_received.event.mouse.wheel, queue_received.event.mouse.pan);
-      }
-      if (status == false && tud_ready()) {
-            ESP_LOGI(pcTaskGetName(NULL), "Sending report to TinyUSB failed => tud status: %d", tud_ready());
-            // if USB is not ready, we wait 1ms retry
-            xQueueSendToFront(global_hid_report_queue, &queue_received, 0);
-      }
+static void merge_keyboard(hid_keyboard_report_t *out,
+                           const hid_keyboard_report_t *physical,
+                           const macro_v1_t *state)
+{
+    *out = *physical;
+    if (state->ctrl) out->modifier |= KEYBOARD_MODIFIER_LEFTCTRL;
+    if (!state->space) return;
+    for (unsigned i = 0; i < 6; ++i)
+        if (out->keycode[i] == HID_KEY_SPACE) return;
+    for (unsigned i = 0; i < 6; ++i) {
+        if (!out->keycode[i]) {
+            out->keycode[i] = HID_KEY_SPACE;
+            return;
+        }
     }
-  }
 }
 
-void hid_init_multiplexer(){
-    // Create the queue to hold HID reports
-    global_hid_report_queue = xQueueCreate(10, sizeof(hid_transmit_t));
-
-    // Create the consumer task (priority = 22)
-    xTaskCreatePinnedToCore(hid_task_multiplexer, "HID Report Multiplexer", 4096, NULL, 22, NULL, 0);
+static void hid_worker(void *arg)
+{
+    macro_v1_t state;
+    macro_v1_reset(&state);
+    hid_keyboard_report_t physical = {0}, sent_key = {0}, key = {0};
+    hid_mouse_report_t mouse = {0};
+    uint8_t sent_buttons = 0;
+    uint8_t last_raw_buttons = 0;
+    bool connected = false, need_neutral = true;
+    bool key_pending = false, mouse_pending = false;
+    int extra_y = 0;
+    status_led_init();
+    for (;;) {
+        if (!tud_ready()) {
+            macro_v1_reset(&state);
+            physical = sent_key = key = (hid_keyboard_report_t){0};
+            mouse = (hid_mouse_report_t){0};
+            sent_buttons = 0;
+            last_raw_buttons = 0;
+            extra_y = 0;
+            connected = false;
+            need_neutral = true;
+            key_pending = mouse_pending = false;
+            xQueueReset(reports);
+            status_led_set(false);
+            vTaskDelay(1);
+            continue;
+        }
+        if (!connected) {
+            connected = true;
+            key_pending = mouse_pending = true;
+        }
+        // Retain each edge until accepted by USB, before advancing the engine.
+        if (key_pending || mouse_pending) {
+            if (tud_hid_ready()) {
+                if (key_pending) {
+                    if (tud_hid_keyboard_report(HID_ITF_PROTOCOL_KEYBOARD, key.modifier, key.keycode)) {
+                        sent_key = key;
+                        key_pending = false;
+                    }
+                } else if (tud_hid_mouse_report(HID_ITF_PROTOCOL_MOUSE, mouse.buttons,
+                                               mouse.x, mouse.y, mouse.wheel, mouse.pan)) {
+                    sent_buttons = mouse.buttons;
+                    mouse = (hid_mouse_report_t){0};
+                    mouse_pending = false;
+                }
+            }
+            vTaskDelay(1);
+            continue;
+        }
+        hid_transmit_t report;
+        bool received = xQueueReceive(reports, &report, 1) == pdTRUE;
+        int64_t now = esp_timer_get_time() / 1000;
+        bool old_enabled = state.enabled;
+        uint8_t old_mode = state.mode, old_action = state.action;
+        if (received && report.header == HEADER_HID_MOUSE) {
+            mouse = report.event.mouse;
+            if (last_raw_buttons != mouse.buttons) {
+                ESP_LOGI("mouse_input", "raw=0x%02x enabled=%d mode=%u blocked=0x%02x neutral=%d",
+                         mouse.buttons, state.enabled, state.mode, state.blocked, need_neutral);
+                last_raw_buttons = mouse.buttons;
+            }
+            // A reconnect never activates a macro from an already-held button.
+            if (need_neutral) {
+                if (!mouse.buttons) need_neutral = false;
+            } else {
+                macro_v1_input(&state, mouse.buttons, now);
+            }
+        } else if (received && report.header == HEADER_HID_KEYBOARD) {
+            physical = report.event.keyboard;
+        }
+        macro_v1_tick(&state, now, esp_random());
+        mouse.buttons = macro_v1_buttons(&state);
+        extra_y += mouse.y + state.recoil;
+        mouse.y = take_axis(&extra_y);
+        mouse_pending = mouse.buttons != sent_buttons || mouse.x || mouse.y || mouse.wheel || mouse.pan;
+        merge_keyboard(&key, &physical, &state);
+        key_pending = memcmp(&key, &sent_key, sizeof(key)) != 0;
+        status_led_set(macro_v1_led(&state, now));
+        if (old_enabled != state.enabled || old_mode != state.mode || old_action != state.action) {
+            ESP_LOGI("macro_v1", "enabled=%d mode=%u action=%u", state.enabled, state.mode, state.action);
+        }
+    }
 }
 
-void hid_add_report(hid_transmit_t report){
-    xQueueSend(global_hid_report_queue, &report, 0);
+void hid_init_multiplexer(void)
+{
+    reports = xQueueCreate(64, sizeof(hid_transmit_t));
+    assert(reports);
+    BaseType_t ok = xTaskCreatePinnedToCore(hid_worker, "HID V1", 4096, NULL, 22, NULL, 0);
+    assert(ok == pdPASS);
+}
+
+void hid_add_report(hid_transmit_t report)
+{
+    xQueueSend(reports, &report, portMAX_DELAY);
 }

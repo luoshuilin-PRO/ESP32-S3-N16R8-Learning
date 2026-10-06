@@ -9,7 +9,7 @@
 | A | ESP32-S3 N16R8 | 已焊接 |
 | B | ESP32-S3 N16R8 | 已用于双板接线；最终焊点检查待补录 |
 
-两板已实测 ESP32-S3 rev v0.2、16MB Flash、8MB PSRAM；CH343 COM 口用于烧录和日志，原生 USB 用于 HID。YD 系列参考资料已找到，实际板卡版本与 USB-OTG 焊接验收仍待补录。
+两板已实测 ESP32-S3 rev v0.2、16MB Flash、8MB PSRAM；CH343 COM 口用于烧录和日志，原生 USB 用于 HID。用户确认仅 A 板短接 USB-OTG 供电焊盘，B 未改；焊后带载电压与实物版本待补录。
 
 ## 学习入口
 
@@ -19,11 +19,11 @@
 - [实验记录模板](experiments/实验记录模板.md)
 - [macroPassthrough 双板接线、焊接、编译烧录与源码快照](experiments/macroPassthrough-n16r8/README.md)
 
-2026-10-06：双板程序编译、烧录、启动验证通过，用户反馈鼠标左键正常、右键触发默认演示宏。完整 HID 与稳定性测试未完成；学习主题继续标为学习中。
+2026-10-06：B 板更新为 RIGHT-USP 右键速点版，烧录、启动和 47 项状态机自测通过。已整理 SPI 接线错误、侧键回测结论、M4 降幅及 LED 限流电阻说明，详见实验记录。实际完整操作与稳定性仍待验证，学习主题继续标为学习中。
 
 ## 官方资料
 
 - [乐鑫 ESP32-S3 文档](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/)
 - [ESP32-S3 芯片数据手册](https://documentation.espressif.com/esp32_s3_datasheet_en.pdf)
 
-当前双板项目使用 ESP-IDF 5.4，保留默认宏供后续测试。
+当前双板项目使用 ESP-IDF 5.4；旧演示宏保存在 Git 历史中，当前 B 固件不执行它们。
