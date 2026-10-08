@@ -3,9 +3,9 @@
 #include <stdint.h>
 
 enum { V1_LEFT = 1, V1_RIGHT = 2, V1_MIDDLE = 4, V1_BACK = 8, V1_FORWARD = 16 };
-enum { V1_IDLE, V1_MINIGUN, V1_M4, V1_USP, V1_GHOST };
+enum { V1_IDLE, V1_MINIGUN, V1_M4 };
 typedef struct {
-    bool enabled, middle_down, long_done, click, ctrl, space;
+    bool enabled, middle_down, long_done, click, ctrl, space, left_suspended;
     uint8_t mode, physical, blocked, action, phase;
     int64_t middle_at, deadline, led_epoch;
     int8_t recoil;

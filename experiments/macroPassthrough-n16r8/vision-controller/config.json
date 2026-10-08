@@ -1,0 +1,20 @@
+{
+  "h_min": 3.0,
+  "h_max": 12.0,
+  "s_min": 150.0,
+  "v_min": 140.0,
+  "min_pixels": 10.0,
+  "max_fraction": 0.65,
+  "min_width": 5,
+  "min_height": 3,
+  "confirm_frames": 1,
+  "interval_ms": 10,
+  "monitor": 0,
+  "roi": {
+    "x": 911,
+    "y": 595,
+    "width": 84,
+    "height": 25
+  },
+  "port": "COM4"
+}
