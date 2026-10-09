@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.20)
+project(vision_dxgi LANGUAGES CXX)
+
+add_executable(vision_dxgi main.cpp detector.cpp serial_link.cpp controller.cpp)
+target_compile_features(vision_dxgi PRIVATE cxx_std_17)
+target_compile_definitions(vision_dxgi PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX)
+if(MSVC)
+    target_compile_options(vision_dxgi PRIVATE /EHsc)
+endif()
+target_link_libraries(vision_dxgi PRIVATE d3d11 dxgi windowscodecs ole32)

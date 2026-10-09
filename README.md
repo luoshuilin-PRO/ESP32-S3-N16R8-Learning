@@ -20,7 +20,7 @@
 - [实验记录模板](experiments/实验记录模板.md)
 - [macroPassthrough 双板接线、焊接、编译烧录与源码快照](experiments/macroPassthrough-n16r8/README.md)
 
-2026-10-08：B 板当前为 VISION-FIRST 版，已烧录并通过 87 项板上状态机自检及隔离串口测试。Windows 红名像素工具与当前 B 固件源码已归档；用户反馈触发延迟仍大，尚未获得端到端耗时数据。C 板摄像头方案仍在可行性讨论，未接线或烧录。详情见[双板实验记录](experiments/macroPassthrough-n16r8/README.md)。
+2026-10-09：B 板仍为 VISION-FIRST 版，A/B 固件本轮未重刷。已归档 Python 快速版和 DXGI 逐帧版；用户在游戏中验证 DXGI 识别切换及 COM4 ACTIVE/STOP ACK，临时窗口验证 B HID 持续点击。当前 DXGI 源码为双 ROI；后续只保留新版小 ROI 是待实施意向。首击端到端延迟仍未测，项目按用户要求暂时停止。详情见[双板实验记录](experiments/macroPassthrough-n16r8/README.md)。
 
 ## 官方资料
 
