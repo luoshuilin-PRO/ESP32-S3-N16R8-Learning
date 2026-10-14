@@ -19,6 +19,7 @@
 - [第一步：确认板卡与连接](notes/00-开始学习.md)
 - [实验记录模板](experiments/实验记录模板.md)
 - [macroPassthrough 双板接线、焊接、编译烧录与源码快照](experiments/macroPassthrough-n16r8/README.md)
+- [HID-Bridge 双板鼠标透传与 OBS/NDI-YOLO 工具](experiments/hid-bridge-mouse-passthrough/README.md)
 
 2026-10-09：B 板仍为 VISION-FIRST 版，A/B 固件本轮未重刷。已归档 Python 快速版和 DXGI 逐帧版；用户在游戏中验证 DXGI 识别切换及 COM4 ACTIVE/STOP ACK，临时窗口验证 B HID 持续点击。当前 DXGI 源码为双 ROI；后续只保留新版小 ROI 是待实施意向。首击端到端延迟仍未测，项目按用户要求暂时停止。详情见[双板实验记录](experiments/macroPassthrough-n16r8/README.md)。
 
