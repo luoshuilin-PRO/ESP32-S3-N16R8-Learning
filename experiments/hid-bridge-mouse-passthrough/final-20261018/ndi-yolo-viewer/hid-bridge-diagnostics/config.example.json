@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "baud_choices": [115200, 921600, 4000000],
+  "query_timeout_seconds": 3,
+  "snapshot_gap_seconds": 2,
+  "udp_host": "127.0.0.1",
+  "udp_port": 24814,
+  "udp_uuid": "AF425414"
+}

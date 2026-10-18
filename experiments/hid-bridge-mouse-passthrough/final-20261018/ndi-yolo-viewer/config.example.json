@@ -1,0 +1,11 @@
+{
+  "model": "models/cf.onnx",
+  "provider": "DmlExecutionProvider",
+  "layout": "v5",
+  "classes": 2,
+  "confidence": 0.25,
+  "allowed": [],
+  "roi": null,
+  "roi_size": null,
+  "source": ""
+}

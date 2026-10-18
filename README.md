@@ -2,6 +2,8 @@
 
 记录 ESP32-S3 学习笔记、硬件、实验与进度。
 
+当前鼠标透传软件最终更新入口：[HID-Bridge / NDI 工具 2026-10-18](experiments/hid-bridge-mouse-passthrough/final-20261018/README.md)。使用 UART17/18 交叉加 GND，与旧 SPI 项目不同。源码已归档，完整离线资源保留在本地迁移目录。
+
 ## 已有硬件
 
 | 编号 | 用户确认的型号 | 排针状态 |
@@ -28,4 +30,4 @@
 - [乐鑫 ESP32-S3 文档](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/)
 - [ESP32-S3 芯片数据手册](https://documentation.espressif.com/esp32_s3_datasheet_en.pdf)
 
-当前双板项目使用 ESP-IDF v5.4-dirty；旧演示宏和 RIGHT-USP 版保存在 Git 历史中，当前 B 固件不执行它们。
+历史 macroPassthrough 项目使用 ESP-IDF v5.4-dirty；旧演示宏和 RIGHT-USP 版保存在 Git 历史中。当前 HID-Bridge 子项目使用官方 v0.1.2，详情以最新入口为准。

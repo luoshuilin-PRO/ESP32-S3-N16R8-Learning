@@ -1,0 +1,874 @@
+[
+  {
+    "path": "apex/apex_v5_320吊打群里其他apex模型.onnx",
+    "sha256": "fb905601d5c8732c261b2a8bec3c2de9555626fe0109805186217376ace9d3ff",
+    "layout": "v5",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "Apex英雄/Apex英雄_20k_brock.onnx",
+    "sha256": "db719ad9ae9a3afc825d8fc8017e16a32cd674931586adb70896f73ea063eb1f",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "Apex英雄/Apex英雄_5pr.onnx",
+    "sha256": "dabe9e2c787001591f5eb1d59e06a0f34098dc89bcf6c5800e168cc31da5c49b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "Apex英雄/Apex英雄_Blue.onnx",
+    "sha256": "a8544ab2b829590137a599f184923bc543b471c09d44d127dcdb6ddad0609d99",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "Apex英雄/Apex英雄_Josh-atx04.onnx",
+    "sha256": "c68bd39dbe49196ecf9b212a357775cad6559c818046d969a8695c684f59eebc",
+    "layout": "ambiguous v5/xyxy",
+    "status": "not-tested-unsupported-or-ambiguous"
+  },
+  {
+    "path": "Apex英雄/Apex英雄_V3_DudesBanned.onnx",
+    "sha256": "0fa6fd176aabe47565ec9aa58f79161e7a30d0d77bf36c2b64121ddf8cb9f538",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "cod/cod20头顶标识.onnx",
+    "sha256": "fae7dce12101d63f40f225fb4507baabfd7b5c50dfd6cdcf5004ac365077bffc",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "cs/cs2_256.onnx",
+    "sha256": "0228e97db53c785abf5d6726f26040a2e49c639b4253ffc5f3e05c83663843d3",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "path": "cs/cs2_320.onnx",
+    "sha256": "50268e923fa5b50f1aa3032653adb0f066a216adfd5f1cbe24012a5ac5e1c222",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "cs/cs2V8_320警0头1匪2头3.onnx",
+    "sha256": "bd471a77f5e24f0c7f919b694ca0d7c18b8c5993eb6a1afdb4c21e4c7b154aba",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "cs/CS2敌我.onnx",
+    "sha256": "b23518b2ae35454ea1459d8b958b711cb314dcef00bd8fd9f45b9488b52c0703",
+    "layout": "yolox",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      416,
+      416
+    ]
+  },
+  {
+    "path": "cs/yolo12n_cs2.onnx",
+    "sha256": "525d3cf4f7317bf6a725877443a2e49ef3dd4a84cbc34f977842c5b057c8fdb3",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "cs/yolo12n_cs2_fp16.onnx",
+    "sha256": "96a16705d3a9e7ecc436f639ac8760143bc7b74541f8357be5b45b6ce4f1d614",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "pubg/PUBGV8_320.onnx",
+    "sha256": "e795f0ac23e9acf7023cad1149f59af7da35fe1c84023cfa3128e4a9bc179e0a",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "pubg/pubgv8s.onnx",
+    "sha256": "e57f3f3c09128ddbbfdee0c06a840c8c4a5d324f1f0d8e2298865b6ff007ca61",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "三角洲/0709.416.onnx",
+    "sha256": "9e8b58abfab4ae1cb6a97252ccffa61d1876c4ffd900affdc11cc510d8716ff4",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      416,
+      416
+    ]
+  },
+  {
+    "path": "三角洲/6AY_v11m_0425_416x416.onnx",
+    "sha256": "9758881373526e51f786635af18d573f871f6f1c0b703a61e6a67e1938a93639",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      416,
+      416
+    ]
+  },
+  {
+    "path": "三角洲/6AY_v26m_0709_640x640.onnx",
+    "sha256": "8263a8fb8cd3757143c22613d329330b4b2ad2eff4e3fdabcb5e1682cd700dd3",
+    "layout": "xyxy",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "三角洲/SF_v11m_401_416 (1).onnx",
+    "sha256": "cc1423525eddc8f051fb07e4c009afb874e1ddaa3918639ac09c34cf676579f0",
+    "layout": "unsupported/uncertain",
+    "status": "not-tested-unsupported-or-ambiguous"
+  },
+  {
+    "path": "三角洲/SF_v11m_401_416.onnx",
+    "sha256": "cc1423525eddc8f051fb07e4c009afb874e1ddaa3918639ac09c34cf676579f0",
+    "layout": "unsupported/uncertain",
+    "status": "not-tested-unsupported-or-ambiguous"
+  },
+  {
+    "path": "三角洲/SF_v11m_401_640 (1).onnx",
+    "sha256": "6b8b995b27c86a1c2254aacb0678d927fe90fe4ed7ba50b56b2de450601010df",
+    "layout": "unsupported/uncertain",
+    "status": "not-tested-unsupported-or-ambiguous"
+  },
+  {
+    "path": "三角洲/SF_v11m_401_640.onnx",
+    "sha256": "6b8b995b27c86a1c2254aacb0678d927fe90fe4ed7ba50b56b2de450601010df",
+    "layout": "unsupported/uncertain",
+    "status": "not-tested-unsupported-or-ambiguous"
+  },
+  {
+    "path": "三角洲/SF_v11s_501_416.onnx",
+    "sha256": "0fd4679447438bc758db0c24947e8dbdda7a9daa08e653a7a3664f7c1f188d61",
+    "layout": "unsupported/uncertain",
+    "status": "not-tested-unsupported-or-ambiguous"
+  },
+  {
+    "path": "三角洲/SF_v11s_501_640.onnx",
+    "sha256": "6f5761e065d6e967b3b72afaa0b21d8c359a6d06c19c09326deecdb7525f73e1",
+    "layout": "unsupported/uncertain",
+    "status": "not-tested-unsupported-or-ambiguous"
+  },
+  {
+    "path": "三角洲/SF_v26m_501_640.onnx",
+    "sha256": "a154f4600189c2f4ef50964acd04cf17934399268bbed81c7c234776abf09f95",
+    "layout": "xyxy",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "三角洲/三角洲行动/三角洲行动_loli.onnx",
+    "sha256": "3d41ffd859bf3d033545c37203febd21dc10c688693e7cf267d0db7cd597fef7",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "使命召唤手游/使命召唤手游_Aim.onnx",
+    "sha256": "3637c217eaa4dca97e5f0bf5cf4ab35f186667a643a2703563fd4ad13589cb05",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/BattleBit迷你战地/迷你战地_V1_Terr.onnx",
+    "sha256": "af6d5ecb14ff1df6a3485ecd7a7e3d5af68d768c32784220f412a240eb991460",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/Riotfall/Riotfall_V1_Knat.onnx",
+    "sha256": "4b4436e0d8c6e5f2d7deda821aa2782a05ab3b15fa57604aa654e8ef4ca8473b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/Zula Global/Zula_Global_natdog400.onnx",
+    "sha256": "88898213bb35cc8277a4c6454f4c7080bff66105eabbce4f38c57e3ab9d96deb",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/使命召唤战区/使命召唤战区_V3_Ruje.onnx",
+    "sha256": "1d1e9d99f192bc4126080ea548e0c4c2e845ff9366da990d6a5565fdf28a5e6e",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/使命召唤黑色行动2/使命召唤黑色行动2_knat.onnx",
+    "sha256": "35740250d9fc06ed3d320053e8d478f869294abf1d7d64a6b5a4a4235ac5677c",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/使命召唤黑色行动2/使命召唤黑色行动2_MCX3.onnx",
+    "sha256": "b88a5445cb5ef903b5ef02c3b1136f3eacf3b7b2b36dfcef0428de30b81d5aa1",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/侠盗公司/侠盗公司_Jonqs.onnx",
+    "sha256": "7ed8c16b54066c0024e510bd8ec96b11bc5cfd4c05b6533e4abec929f4e9a1a0",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/克朗克/克朗克_2K_Themida.onnx",
+    "sha256": "3c090c25944983deeb126186f6f57a26b178dd339d9b27f8d2364c1cc9a0589f",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/幻影部队/幻影部队_Hamsta_v1.0.0.onnx",
+    "sha256": "b25e0c6dbe87475837bb0f85a40cc7ab98ea40cd0b7486f53f3fede6ff405238",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/战争前线/战争前线_dizy.onnx",
+    "sha256": "69157e2ef7e63859bf0df3f9292bb3989cfe35b6471d3991e6b72818e3ce659d",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/战争雷霆/战争雷霆_街机模式_仅飞机_bevo.onnx",
+    "sha256": "fb911b2c138dbeab726afaf9b9ea89235d55ec9f238a78d42e25732be447b84b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/战地3/战地3_V1_gustavo.onnx",
+    "sha256": "ae1ed6f3a4ce1b2eb59086b64100c4ec3e24e03ef869f3dc31e9b16f67107454",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/战地4/战地4_1.5k_plzh.onnx",
+    "sha256": "2d55053e54d2043b5434cdadb334662521fba000a86d7300aa657900865c833b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/战壕战争/战壕战争_oSheep.onnx",
+    "sha256": "6d0e9b4e9ab1947bf0dc6c5aa1ca246293cf636d5b87879856e1c3769ea2b51f",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/战斗大师/战斗大师_3.5K_Djayson.onnx",
+    "sha256": "3b5ba8a6b0f1f68f32cecef501ed509be827b4273c9d420747419fa9848387d2",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/星际战甲/星际战甲_Ricky.onnx",
+    "sha256": "3049c5fa97dcf4f1928ad1663b4dbe7a87350f0709aa41c1303483b67026ffc4",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/星际战甲/星际战甲_SIRMEME.onnx",
+    "sha256": "643d7c419eb36fe919b204ab9c894f6c3961f56ed42d79adbed432fc8de0ecf7",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/最终决战/最终决战_12K_MagicModz89.onnx",
+    "sha256": "acc99a9d97318124ec103845b47a9eb92e0a7a310d90ed07a4156ad2b86be5e7",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/最终决战/最终决战_20K_Ardwrtbwrtb.onnx",
+    "sha256": "ddbbdb6e30b5c27a6455fdd1de40265910ffb4d082a851fccedb278b1c9a5e29",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/最终决战/最终决战_V2_DudesBanned.onnx",
+    "sha256": "3e5ddd5faf515534972d783e1cbcbf6f547b2da43272d8d6e765bcdd0033236d",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/最终决战/最终决战_血条追踪_HakaCat.onnx",
+    "sha256": "08f828ec7b990af0978eb367e1039f4e251ba389b636d919616312fde652144f",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/未转变者/未转变者_hogthewog.onnx",
+    "sha256": "ed7e2595ec032925ed1f88cee64192f2497c14e962fc782776f87d5a5714828a",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/未转变者/未转变者_Kwenma.onnx",
+    "sha256": "68a4a58752d5e32904a2f8368dc9ffe8473e4da12ad462deee73f3c26f05f3d2",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/未转变者/未转变者_zpet.onnx",
+    "sha256": "09b491f03dc073451a9e5c5d3ee610b6314456153d17f1f669a0fd41c0ae4442",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/枪战竞技场/枪战竞技场_Doctor.onnx",
+    "sha256": "3eb6441487dcf269e83a14a071c1010b826af02d1364cd8a05d7feb9066d86d8",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/枪火游侠/枪火游侠_V1_zxqaui.onnx",
+    "sha256": "001d35813c23c339c3e1f9a677eca53d99fcfb85a26fec5cbb7c6de292f780cb",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/枪火重生/枪火重生.onnx",
+    "sha256": "e135f57e553112a39d226bc8fc8fb52e854feb743a3d71fcbde4fe5b70e4d40b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/永恒空间/永恒空间.onnx",
+    "sha256": "2f21bdc0d6dcbcda30418d4aaf76bb2bc7f366620ee6734edff3e3b3e385d714",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/永恒空间2/永恒空间2.onnx",
+    "sha256": "025109cb029de312f690435828f32b87aee05c7cae5f414a9c6a88bbde8b9857",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/红色对决2/红色对决2_1.2k_noreaction.onnx",
+    "sha256": "5a5abcadd0864aca0a17b775e046b4085175f38fcc937283f4787e8272e68e62",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/腐蚀/腐蚀_5K_Roach.onnx",
+    "sha256": "b622d7bd109e54f319d61520be88aead0b4d1e5920c173bc30fe1a49614f65d1",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/腐蚀/腐蚀_Dolf.onnx",
+    "sha256": "056e2121f4899cdcb02ec5edd2d0f2a8ff1793138992a74f37d1bf05a23cf550",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/自由之火/自由之火_V1_Ricky.onnx",
+    "sha256": "7fc94e5951c76d0aa337ba2a862dbc71fd155d345c8089f990f03d496823d4d3",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/荒野大镖客2/荒野大镖客2_REDM_Padre.onnx",
+    "sha256": "ec5cb05f52cb740758df1a121ba043d090d30c08b8279f29b171ec4ece6e970e",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/血与铁/血与铁_Rapl.onnx",
+    "sha256": "a75a5ccf51a9186949dd6ebbdaf9f49b2b1478d14e5dc0e1208a5f74fac5250f",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/血袭/血袭_1K_cruz.onnx",
+    "sha256": "db81f6b0901ecb35c16ae9114e7d7dd52e72e4c98bd48bc263659fa9b44bf6eb",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/血袭/血袭_V1_BihiBihi.onnx",
+    "sha256": "7a955d662051c4ba6d908b55c9e1d5deeb68df5fc4c257976b43972256b08dc5",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "其他游戏/陨落求生/陨落求生_5K_rooteddevices.onnx",
+    "sha256": "116b0428380fbc797ef123f78073b81ab311ad3ff43aaf8d6e272c29934dc095",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "反恐精英2/反恐精英2.onnx",
+    "sha256": "a54bd91a77e3783c9263fc376531017c1d1f8454af23cbff614896cc411b1362",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "反恐精英2/反恐精英2_Kwnema.onnx",
+    "sha256": "e3631c9fea93500e72a1d77827b367759a14cf206763bf5200ab5c58cd132686",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "反恐精英2/反恐精英2_上身模型_TDKadnan.onnx",
+    "sha256": "4176573354ccbfa044052a30ba5ea66d48b112915da32a257146837b8ae6c28c",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "堡垒之夜/堡垒之夜_hogthewog.onnx",
+    "sha256": "c29b4994aed702a884703d6bc86428c4a7d8f0cae4e763b655e17d20909aab7d",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "堡垒之夜/堡垒之夜_V2_仅云游戏_HellMid.onnx",
+    "sha256": "8fd3ff43a78cd975e04d56096c7fa4127e11a163ad9b9b10c73f143597e4c61b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "堡垒之夜/堡垒之夜_基础模型_vanishLLC_natdog400.onnx",
+    "sha256": "cdd4dcc02ee47032fa1d8f0189b65e63c0024993c94db8b2763eccda9168b87c",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "守望先锋2/守望先锋2_V3_MrPingviin.onnx",
+    "sha256": "7ecc05ec92d04edd9700bb5dab422f1862ed6c0c6cf6b087212b76fcc468af9c",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "彩虹六号围攻/彩虹六号围攻_1.5k.onnx",
+    "sha256": "b4424d68c53a03de4f33ed887c44bee43be83ef04d31f659f636a455d1896807",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "彩虹六号围攻/彩虹六号围攻_LhoutzX.onnx",
+    "sha256": "ad60975a49ac949946dcca9f537445a01d62e1f2e4fed45ad3b791b55642e159",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "彩虹六号围攻/彩虹六号围攻_V2_lazy.onnx",
+    "sha256": "86948329b11df95889f075e0e0770d6e70f5b00523f6b1cc1a263205f24a4657",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "彩虹六号围攻/彩虹六号围攻_V2_Raccoon_Z1n3x.onnx",
+    "sha256": "59c5c2b4f52e40448eb9244a7d078941eed3f3afb9787cf909d43b28ced3e92a",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "无畏契约模型/7-wahong-v11s-320.onnx",
+    "sha256": "d9cb33d919eed3d4a07a8600baa8272c4f3d1be79d67409daaf9d6cd49512c1b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "无畏契约模型/kenny_ultra_640_v11s.onnx",
+    "sha256": "07665caf1ede5f1ad2a88511a23901b1eb3476996361d308190ced5c4078e4d0",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "无畏契约模型/ks.onnx",
+    "sha256": "45b6d6515a94ba1ff418fbb20d3f9578a9ad83fd02d6f9a3b87fff92a81cac77",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "无畏契约模型/val_kenny_ultra_256_v11s.onnx",
+    "sha256": "94748857963c6cc54f57c32c3edb96cd154359d4274e5a3591bd2f55649b9989",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "path": "无畏契约模型/val_kenny_ultra_320_v11s.onnx",
+    "sha256": "8ae4a641fffa3bb9c6279b3cfc87a74aadc8c4673f345680dfa89b60e20d3c6c",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "无畏契约模型/wa-v11s-320  77777.onnx",
+    "sha256": "9fe0177418debe4997d6e54fdfb42701e4ea2abd0d1d521a2ed4a210dac660c9",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      320,
+      320
+    ]
+  },
+  {
+    "path": "无畏契约模型/晚风 瓦-v11，紫色256.onnx",
+    "sha256": "ccc436215ae9f98a404afbd89a8cc898b736d9a0cb48508d1234cc03122a8a61",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "path": "测试模型/测试模型_bo7_detector.onnx",
+    "sha256": "4a715390788f0bb78b6ea5a0041f46bd952c340f061b7f31d30f7a6136b1f4f9",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "测试模型/测试模型_cstest5000.onnx",
+    "sha256": "67f2f72faf655d11608d5643e90f7b507a0a7265ef300b4b7bbaf70d3ed882a6",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "测试模型/测试模型_Stalbestv3.onnx",
+    "sha256": "b74ce6d01d4d034b7523077315dedffc07cc4f30b78fc814f4d855ba6c66e1aa",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "通用检测模型/通用人形检测_AIO_V7_natdog400.onnx",
+    "sha256": "46a7fc44bfe047e3078ed924da5d7bedc23561d5754690cb30b8e54416ea7172",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "通用检测模型/通用人形检测_AIOv10.onnx",
+    "sha256": "855395106dc9451abc26a8182310f3a5a366d30b069bc1211a6263989317aa54",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "通用检测模型/通用检测_D2_1K_Jin.onnx",
+    "sha256": "9d6ee9be0019a4bbb191c64fb4c333d6856172b42dd1995c4bc8590fe8f50388",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  },
+  {
+    "path": "通用检测模型/通用检测_UniversalHamsta_v4.onnx",
+    "sha256": "5170fa6521f676291d841f5aed59578cff32c924a972c82ffc72cf5443fa8d0b",
+    "layout": "v8",
+    "status": "CPU-load-zero-inference-parser-PASS",
+    "size": [
+      640,
+      640
+    ]
+  }
+]

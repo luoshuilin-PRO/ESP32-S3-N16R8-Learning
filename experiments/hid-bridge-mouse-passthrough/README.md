@@ -1,5 +1,7 @@
 # HID-Bridge 双板鼠标透传与视觉实验
 
+**最新入口：[2026-10-18 最终更新](final-20261018/README.md)**。此前 10 月 14 日“最终版”和下方 `current/` 为历史快照。新版已整合工具与项目内 NONX；当前 GPIO17/18 交叉 UART 加共地，不使用旧 macroPassthrough 的 SPI 接线。
+
 本目录记录 2026-10-13 至 2026-10-14 的双板实验。固件采用上游 [ESP32-S3-HID-Bridge v0.1.2](https://github.com/guobaren/ESP32-S3-HID-Bridge)；这里归档的是配套 Windows 程序，并非上游固件的修改版。
 
 ## 硬件连接
